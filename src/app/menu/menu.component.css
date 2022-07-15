@@ -1,0 +1,16 @@
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 60vw;
+  align-items: center;
+}
+
+.link {
+  flex: 1 1 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15pt;
+  text-decoration: none;
+  color: #fefffe;
+}

@@ -1,0 +1,7 @@
+.soonEvents {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  justify-content: space-evenly;
+}
