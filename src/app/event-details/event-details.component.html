@@ -1,0 +1,33 @@
+<div id="eventBox" class="hidden">
+  <div id="eventBoxContent">
+    <div class="closeEventCard"  (click)="closeEventDetails()" >❌</div>
+    <h2>Informations détaillées</h2>
+    <div id="eventBoxText"  *ngIf="event">
+      <p>Nom : <br />{{ event.label }}</p>
+      <p>
+        Date :<br />
+        {{event.datetime  | date:'dd/MM/yyyy'}}
+      </p>
+      <p>
+        Heure :<br />
+        {{event.datetime  | date:'hh:mm'}}
+      </p>
+      <p>
+        Ville :<br />
+        {{ event._embedded.venue.city }}
+      </p>
+      <p>
+        Lieu :<br />
+        {{ event._embedded.venue.label }}
+      </p>
+      <p>
+        Capacité de la salle :<br />
+        {{ event.costing_capacity }}
+      </p>
+      <p>
+        Nombre de places restantes :<br />
+        {{ event.costing_capacity - event.sales }}
+      </p>
+    </div>
+  </div>
+</div>

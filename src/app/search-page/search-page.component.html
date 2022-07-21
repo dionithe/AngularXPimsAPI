@@ -1,1 +1,4 @@
-<p>search-page works!</p>
+<div id="searchPage">
+	<app-search-section (sender)="receiver($event)"></app-search-section>
+	<app-event-details [eventID]="selectedEventID"></app-event-details>
+</div>

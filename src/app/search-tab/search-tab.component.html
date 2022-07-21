@@ -1,0 +1,22 @@
+  <div id="searchTab">
+    <label for="event-filter">Je recherche les concerts </label>
+    <select v-model="eventFilter" id="event-filter" v-on:change="event_filter">
+      <option value="label" selected>d'un artiste</option>
+      <option value="venue_label">dans une salle</option>
+      <option value="venue_city">dans une ville</option>
+    </select>
+    <input
+      type="text"
+      name="search"
+      [(ngModel)]="search"
+      placeholder="... ?"
+      (keyup)="searchAction(search)"
+    />
+    <label for="event-sort"> trié par </label>
+    <select v-model="eventSort" id="event-sort" v-on:change="event_sort">
+      <option value="AZArtist" selected>artiste ⏫</option>
+      <option value="ZAArtist">artiste ⏬</option>
+      <option value="AZDate">date ⏫</option>
+      <option value="ZADate">date ⏬</option>
+    </select>
+  </div>

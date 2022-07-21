@@ -1,0 +1,8 @@
+#searchPage {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  color: #383231;
+  display: flex;
+  justify-content: center;
+}

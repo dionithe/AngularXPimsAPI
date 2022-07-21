@@ -1,0 +1,11 @@
+#searchResults {
+  margin: auto;
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.searchResultCard {
+  margin: 2vh;
+}

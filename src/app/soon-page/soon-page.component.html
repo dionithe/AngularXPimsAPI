@@ -1,8 +1,9 @@
 <div id="soonPage">
 	<div id="soonBody">
-		<app-soon-section [city]="'Paris'"></app-soon-section>
-		<app-soon-section [city]="'Lyon'"></app-soon-section>
-		<app-soon-section [city]="'Nantes'"></app-soon-section>
-		<app-soon-section [city]="'Bordeaux'"></app-soon-section>
+		<app-soon-section [city]="'Paris'" (sender)="receiver($event)"></app-soon-section>
+		<app-soon-section [city]="'Lyon'" (sender)="receiver($event)"></app-soon-section>
+		<app-soon-section [city]="'Nantes'" (sender)="receiver($event)"></app-soon-section>
+		<app-soon-section [city]="'Bordeaux'" (sender)="receiver($event)"></app-soon-section>
 	</div>
+	<app-event-details [eventID]="selectedEventID"></app-event-details>
 </div>

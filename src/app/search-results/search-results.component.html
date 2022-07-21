@@ -1,0 +1,3 @@
+<div id="searchResults">
+	<app-event-card *ngFor="let event of eventsList" [event]="event" (sender)="receiver($event)"></app-event-card>
+</div>

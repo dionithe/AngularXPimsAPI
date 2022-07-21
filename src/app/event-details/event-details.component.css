@@ -1,0 +1,47 @@
+#eventBox {
+  background-color: #fefffe;
+  box-shadow: 0.25vh 0.25vh 2vh #6b6b6b7a;
+  padding: 2vw;
+  z-index: 100;
+  border-left: #f1a130 2vw solid;
+  width: 45vw;
+}
+.hidden {
+  display: none;
+}
+#eventBoxContent {
+  position: fixed;
+  margin-left: -1vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  #eventBox {
+    position: fixed;
+    top: 20vh;
+    width: 80vw;
+    height: 60vh;
+    border: #f1a130 2vw solid;
+    border-radius: 25px;
+  }
+  #eventBoxContent {
+    margin-left: 1vw;
+  }
+  #eventBoxText {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #eventBoxContent h2 {
+    padding: 30px;
+  }
+  #eventBoxContent p {
+    width: 15vw;
+    margin: 2vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #eventBox {
+    position: fixed;
+    height: 70vh;
+  }
+}

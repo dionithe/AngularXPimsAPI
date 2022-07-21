@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./soon-page.component.css']
 })
 export class SoonPageComponent implements OnInit {
+  public selectedEventID : any = null;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  receiver(receivedFromChild:any){
+    console.log(receivedFromChild);
+    this.selectedEventID = receivedFromChild;
   }
 
 }

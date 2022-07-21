@@ -1,6 +1,6 @@
 <div id="soonSection">
   <h2>À venir à <span>{{city}}</span></h2>
   <div class="soonEvents">
-    <app-event-card *ngFor="let event of eventsList" [event]="event"></app-event-card>
+    <app-event-card *ngFor="let event of eventsList" [event]="event" (sender)="receiver($event)"></app-event-card>
   </div>
 </div>

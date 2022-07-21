@@ -1,5 +1,5 @@
-  <div class="eventCard">
+  <div (click)="selectEventCard(event.id)" class="eventCard searchResultCard">
     <p>{{ event.label }}</p>
-    <p>{{event.datetime}}</p>
+    <p>{{event.datetime  | date:'dd/MM/yyyy'}}</p>
     <p>{{event._embedded.venue.label}}</p>
   </div>

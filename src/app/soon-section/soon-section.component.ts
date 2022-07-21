@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 declare const getEventsInCity: any;
-declare let eventsList: any;
 
 @Component({
   selector: 'app-soon-section',
@@ -10,11 +9,16 @@ declare let eventsList: any;
 export class SoonSectionComponent implements OnInit {
   public eventsList:any;
   @Input() city?: any;
+  @Output() sender = new EventEmitter();
 
   constructor() { }
 
   async ngOnInit(): Promise<void> {
     this.eventsList = await getEventsInCity(this.city);
+  }
+
+  receiver(receivedFromChild:any){
+    this.sender.emit(receivedFromChild);
   }
 
 }

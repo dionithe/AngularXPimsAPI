@@ -117,6 +117,7 @@ async function getEventsBySearch(filter = "label", search) {
   const myRequest = new Request(
     "https://sandbox.pims.io/api/v1/events?" + new URLSearchParams(params)
   );
+
   const reponse = await fetch(myRequest, myInit)
     .then((response) => {
       if (response.status == 200) {
